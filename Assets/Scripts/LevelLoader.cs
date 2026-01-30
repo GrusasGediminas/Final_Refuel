@@ -10,7 +10,7 @@ public class LevelLoader : MonoBehaviour
     public static LevelLoader Instance { get; private set; }
 
     public Animator transition;
-    public float transitionTime = 1f;
+    public float transitionTime = 0f; //1f
 
 
     private void Awake()
@@ -45,7 +45,6 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator LoadLevel(int levelIndex)
     {
-        Debug.Log("ANIMATION TRIGGERED!");
         Time.timeScale = 1f;
         
         if (transition != null)
